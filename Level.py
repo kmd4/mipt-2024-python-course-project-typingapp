@@ -22,7 +22,7 @@ class Level():
         return checking
 
     def createLevel(self, new_string):
-        lst = os.listdir("../levels")  # your directory path
+        lst = os.listdir("levels")  # your directory path
         count_levels = len(lst)
         f = open(f"levels/level_{count_levels + 1}", "w")
         self.string = new_string

@@ -1,5 +1,5 @@
-from src.Checker_events import *
-from src.Drawing import *
+from Checker_events import *
+from Drawing import *
 
 
 def start_menu(screen):

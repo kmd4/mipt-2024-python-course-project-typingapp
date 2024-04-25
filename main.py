@@ -1,6 +1,6 @@
 import sys
-from src.Create_screen import *
-from src.Scenes import *
+from Create_screen import *
+from Scenes import *
 
 
 def main():
