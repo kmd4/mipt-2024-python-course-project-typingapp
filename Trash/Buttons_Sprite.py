@@ -1,6 +1,5 @@
-import pygame
 from tools.Load_image import *
-from Scenes import *
+from src.Scenes import *
 
 class Button(pygame.sprite.Sprite):
 

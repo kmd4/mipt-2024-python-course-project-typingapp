@@ -44,17 +44,13 @@ class Checker_events:
         if pygame.key.get_mods() & pygame.KMOD_SHIFT:
             if (65 <= ord(my_string[now_index]) <= 90):
                 if (event.key == self.comands_letter[ord(my_string[now_index]) - 65]):
-                    print("SHIFT + ", my_string[now_index])
                     now_index += 1
             elif (event.key in self.comands_letter) or (event.key in self.comands_digits):
                 mistakes += 1
-                print("ER")
             elif (97 <= ord(my_string[now_index]) <= 122) and ((event.key in self.comands_letter) or (event.key in self.comands_digits)):
                 mistakes += 1
-                print("ERROR!")
             elif (48 <= ord(my_string[now_index]) <= 57) and ((event.key in self.comands_digits) or (event.key in self.comands_digits)):
                 mistakes += 1
-                print("ERROR!")
         elif (97 <= ord(my_string[now_index]) <= 122) and (event.key == self.comands_letter[ord(my_string[now_index]) - 97]):
             print(my_string[now_index])
             now_index += 1
@@ -63,9 +59,7 @@ class Checker_events:
             print(my_string[now_index])
             now_index += 1
         elif (ord(my_string[now_index]) == 32) and event.key == pygame.K_SPACE:
-            print("space")
             now_index += 1
         else:
             mistakes += 1
-            print("ERORRRR!!")
         return mistakes, now_index
