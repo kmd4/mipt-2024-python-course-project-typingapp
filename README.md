@@ -20,7 +20,9 @@
 
 ### Запуск проекта
 Для запуска проекта необходимо установить библиотеки из файлы requirements.txt:
+
 pip install -r requirements.txt
 
 и запустить файл main.py:
+
 python3 main.py
