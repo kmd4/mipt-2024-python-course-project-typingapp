@@ -17,3 +17,10 @@
 2) Функции отрисовки игровых сцен draw_start_page, draw_level,draw_game_over
 3) Checker_events() - класс проверки и обработки событий нажатия клавиш
 4) Button() - класс кнопки и обработки события с кнопкой
+
+### Запуск проекта
+Для запуска проекта необходимо установить библиотеки из файлы requirements.txt:
+pip install -r requirements.txt
+
+и запустить файл main.py:
+python3 main.py
