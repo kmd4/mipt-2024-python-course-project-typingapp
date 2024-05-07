@@ -18,3 +18,10 @@
 2) class Level - класс, представляющий собой уровень. Включает в себя строку, которую пользователь должен будет напечатать
 3) функция make_level - позволяет пользователю самостоятельно создать новый уровень
 4) функция поддержания статистики и записи лучшего времени/минимального количества ошибок
+
+
+### Requirements:
+pygame
+
+### Launch:
+git clone https://github.com/kmd4/TypingApp_Python_project.git && cd TypingApp && git checkout development && pip install -r requirements.txt && python3 main.py
