@@ -21,7 +21,7 @@
 
 
 ### Requirements:
-pygame
+pygame (version 2.5.2)
 
 ### Launch:
 git clone https://github.com/kmd4/TypingApp_Python_project.git && cd TypingApp && git checkout development && pip install -r requirements.txt && python3 main.py
