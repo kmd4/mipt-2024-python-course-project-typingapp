@@ -1,11 +1,7 @@
-import pygame
-from Buttons import Button
-from Create_screen import width, height
+from src.buttons import *
+from src.create_screen import width, height
 
-start_game_button = Button(width / 2 - 100, 300, 200, 60, "images/play.png", "images/play_hover.png", "musics/click.mp3")
-pause_button = Button(70, 10, 50, 50, "images/pause.png", "images/pause_hover.png", "musics/click.mp3")
-menu_button = Button(10, 10, 50, 50, "images/menu.png", "images/menu_hover.png", "musics/click.mp3")
-restart_button = Button(width/2 - 25, 350, 50, 50, "images/restart.png", "images/restart_hover.png", "musics/click.mp3")
+
 def draw_level(screen, now_index, my_str, mistakes, ticks, pause_flag):
     seconds = int(ticks / 1000 % 60)
     minutes = int(ticks / 60000 % 24)
@@ -13,8 +9,8 @@ def draw_level(screen, now_index, my_str, mistakes, ticks, pause_flag):
 
     screen.fill((0, 0, 0))
 
-    font = pygame.font.Font("/fonts/introheadr-base.ttf", 40)
-    font1 = pygame.font.Font("/fonts/introrustg-base2line.ttf", 20)
+    font = pygame.font.Font("fonts/introheadr-base.ttf", 40)
+    font1 = pygame.font.Font("fonts/introrustg-base2line.ttf", 20)
     text_all = font.render(my_str, True, (100, 255, 100))
     text_written = font.render(my_str[:now_index], True, (100, 255, 100))
     text_unwritten = font.render(my_str[now_index:], True, (100, 100, 100))
@@ -50,7 +46,6 @@ def draw_level(screen, now_index, my_str, mistakes, ticks, pause_flag):
 def draw_start_page(screen):
     screen.fill((0, 0, 0))
 
-
     font = pygame.font.Font("fonts/introrustg-base2line.ttf", 40)
     text = font.render("Клавиатурный тренажер", True, (255, 255, 255))
 
@@ -58,6 +53,7 @@ def draw_start_page(screen):
     all_text_y = height // 2 - text.get_height() // 2 - 50
 
     screen.blit(text, (all_text_x, all_text_y))
+
 
 def draw_pause(screen):
     font = pygame.font.Font("fonts/introrustg-base2line.ttf", 40)
@@ -68,6 +64,7 @@ def draw_pause(screen):
 
     screen.blit(text_pause, (text_pause_x, text_pause_y))
 
+
 def draw_game_over(screen):
     screen.fill((0, 0, 0))
     font = pygame.font.Font("fonts/introrustg-base2line.ttf", 40)
@@ -77,5 +74,3 @@ def draw_game_over(screen):
     text_game_over_y = height // 2 - text_game_over.get_height() // 2
 
     screen.blit(text_game_over, (text_game_over_x, text_game_over_y))
-
-

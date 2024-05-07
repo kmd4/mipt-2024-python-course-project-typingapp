@@ -1,6 +1,6 @@
-import pygame
+from src.constants import *
 
-pygame.init()
+
 class Button:
     def __init__(self, x, y, width, height, image, hover_image=None, sound=None):
         self.x = x
@@ -35,3 +35,11 @@ class Button:
             pygame.event.post(pygame.event.Event(pygame.USEREVENT, button=self))
             return True
         return False
+
+
+start_game_button = Button(width / 2 - 100, 300, 200, 60, "images/play.png", "images/play_hover.png",
+                           "musics/click.mp3")
+pause_button = Button(70, 10, 50, 50, "images/pause.png", "images/pause_hover.png", "musics/click.mp3")
+menu_button = Button(10, 10, 50, 50, "images/menu.png", "images/menu_hover.png", "musics/click.mp3")
+restart_button = Button(width / 2 - 25, 350, 50, 50, "images/restart.png", "images/restart_hover.png",
+                        "musics/click.mp3")

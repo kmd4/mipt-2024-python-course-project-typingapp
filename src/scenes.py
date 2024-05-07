@@ -1,5 +1,5 @@
-from Checker_events import *
-from Drawing import *
+from src.checker_events import *
+from src.drawing import *
 
 
 def start_menu(screen):
@@ -27,11 +27,10 @@ def start_level(screen, number_level, mistakes, start_time):
     my_string = f_level.readline().strip()
     size_string = len(my_string)
     now_index = 0
-    checker = Checker_events()
+    checker = CheckerEvents()
     pause_time = 0
     start_pause_time = 0
     end_pause_time = 0
-
 
     ticks = pygame.time.get_ticks() - start_time;
     draw_level(screen, now_index, my_string, mistakes, ticks, pause_flag)
@@ -70,6 +69,7 @@ def start_level(screen, number_level, mistakes, start_time):
         pygame.display.flip()
     pygame.quit()
 
+
 def game_over(screen):
     running = True
 
@@ -84,4 +84,3 @@ def game_over(screen):
         restart_button.draw(screen)
         pygame.display.flip()
     pygame.quit()
-

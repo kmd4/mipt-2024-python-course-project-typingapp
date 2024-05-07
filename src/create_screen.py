@@ -1,8 +1,9 @@
 import pygame
 
-from tools.Load_music import load_music
-from tools.Load_image import load_image
-size = width, height = 800, 600
+from tools.load_music import load_music
+from tools.load_image import load_image
+from src.constants import *
+
 
 def create_screen():
     pygame.init()
