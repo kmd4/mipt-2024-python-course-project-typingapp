@@ -13,6 +13,19 @@
 ### Архитектура проекта:
 
 Проект будет написан с использованием функционала библиотеки pygame. Основные классы и их функции (в процессе реализации проекта возможны изменения в данной части):
+
+1) Screene - графическое окно, в котором происходит отрисовка всех действий.
+2) class Level - класс, представляющий собой уровень. Включает в себя строку, которую пользователь должен будет напечатать
+3) функция make_level - позволяет пользователю самостоятельно создать новый уровень
+4) функция поддержания статистики и записи лучшего времени/минимального количества ошибок
+
+
+### Requirements:
+pygame (version 2.5.2)
+
+### Launch:
+mkdir Typing_App && cd Typing_App && git clone https://github.com/kmd4/TypingApp_Python_project.git && git checkout development && pip install -r requirements.txt && python3 main.py
+
 1) Функции начала игровых сцен - start_menu, start_level, game_over
 2) Функции отрисовки игровых сцен draw_start_page, draw_level,draw_game_over
 3) Checker_events() - класс проверки и обработки событий нажатия клавиш
@@ -26,3 +39,4 @@ pip install -r requirements.txt
 и запустить файл main.py:
 
 python3 main.py
+
